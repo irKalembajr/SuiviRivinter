@@ -1,0 +1,12 @@
+import {createRequire} from 'node:module';
+import {dirname,join} from 'node:path';
+import {mkdir,copyFile,readdir} from 'node:fs/promises';
+const require=createRequire(import.meta.url);
+const tess=dirname(require.resolve('tesseract.js/package.json'));
+const core=dirname(createRequire(join(tess,'package.json')).resolve('tesseract.js-core/package.json'));
+const lang=require('@tesseract.js-data/fra');
+await mkdir('public/ocr/core',{recursive:true});
+await copyFile(join(tess,'dist/worker.min.js'),'public/ocr/worker.min.js');
+for(const f of await readdir(core))if(/\.wasm(\.js)?$/.test(f))await copyFile(join(core,f),join('public/ocr/core',f));
+await copyFile(join(lang.langPath,'fra.traineddata.gz'),'public/ocr/fra.traineddata.gz');
+console.log('OCR local prêt.');
