@@ -9,7 +9,8 @@ Nouvelle application indépendante : **nouveau dépôt GitHub, nouveau projet Ve
 - PDF texte ou scanné : lecture locale, OCR français, contrôle humain avant encodage et stockage privé du justificatif.
 - Report initial saisi manuellement, modifiable et verrouillable par un administrateur, avec historique des changements.
 - Reprise fidèle d’un classeur préanalysé, réservée à une base neuve.
-- Rapports mensuels, écart livraisons–retours, CSV et impression/PDF.
+- Rapports mensuels, écart livraisons–retours, CSV, export Excel complet et impression.
+- PDF A4 des dix dernières transactions datées, avec références, impacts et quantités signées.
 - Comptes administrateurs/utilisateurs, désactivation, changement de mot de passe.
 - Annulation par contrepassation datée ; pas de suppression ni modification des mouvements originaux.
 

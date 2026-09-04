@@ -1,6 +1,6 @@
 # Vérifications de livraison
 
-- 14 tests automatisés réussis : calculs, fractions invalides, signes, bacs associés, références, dates et contrepassations.
+- 18 tests automatisés : calculs, fractions invalides, signes, bacs associés, références, dates, contrepassations et exports Excel/PDF, dont les crédits historiques négatifs.
 - SQL exécuté sous PostgreSQL embarqué PGlite : droits utilisateur/admin, interdiction de suppression directe, verrouillage du report, reprise atomique, absence d’écrasement.
 - Justificatifs : existence dans le stockage, propriétaire, validation humaine, motif des avertissements et empreinte unique contrôlés côté base.
 - Les deux scans fournis ont été lus par Tesseract français ; les références et quantités obtenues ont été comparées aux documents.
@@ -15,7 +15,7 @@
 4. Créer un utilisateur de test, vérifier la consultation et l’encodage, puis sa désactivation.
 5. Importer un PDF de test complet, contrôler les lignes, conserver le document et ouvrir le justificatif.
 6. Vérifier le refus d’un doublon, puis une contrepassation de test et son effet daté.
-7. Vérifier impression et CSV sur votre navigateur.
+7. Dans Rapports, télécharger l’Excel complet et le PDF A4 des dix dernières transactions ; vérifier aussi impression et CSV sur votre navigateur.
 8. Mettre en place les sauvegardes base + Storage.
 
 Les connexions Supabase réelles et la fonction de création de comptes Vercel n’ont pas été exécutées contre un service configuré. Le moteur OCR a été testé localement, pas le parcours navigateur complet. Aucun contrôle visuel automatisé n’a été effectué.
